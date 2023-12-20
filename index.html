@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай число</title>
+    <link rel="shortcut icon" href="./src/assets/img/logo.ico" type="image/svg">
+    <link rel="stylesheet" href="./src/assets/styles/minified_layout.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="content">
+                <header>
+                    <h2 id="message" class="message">Загадано число от 1 до 100, ваша задача его отгадать</h2>
+                    <div class="buttons">
+                        <button id="settings" class="settings" type="button"></button>
+                        <div id="settings-menu" class="settings-menu">
+                            Загадывать числа в диапазоне
+                            <label>
+                                от:
+                                <input id="min-number-input" type="number" value="1">
+                            </label>
+                            <label>
+                                до
+                                <input id="max-number-input" type="number" value="100">
+                            </label>
+                        </div>
+                        <button id="restart" class="restart" type="button"></button>
+                    </div>
+                </header>
+                <form id='guess-form'>
+                    <label>
+                        <input type="number" id="guess-input" class="guess" placeholder="Введите число">
+                    </label>
+                    <button type="submit" id="guess-submit">Отправить</button>
+                </form>
+                <div class="info">
+                    <div id="history" class="history">
+                        <span id="attempts-count"></span>
+                        <div id="attempts-items" class="attempts-items"></div>
+                    </div>
+                </div>
+                <div id="hint" class="hint"></div>
+            </div>
+        </div>
+    </main>
+<script src="./src/scripts/minified_logic.js" type="module"></script>
+</body>
+</html>
